@@ -1,0 +1,284 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nguyên t?c tri?n khai code:
+1. T? ngoài vào trong
+2. T? trên xu?ng dý?i
+3. T? t?ng quan ð?n chi ti?t
+ */
+
+/*
+1. V? trí
+2. Kích thý?c (width,height)
+3. Màu s?c
+4. Ki?u dáng (ki?u ch?, h?nh ,...)
+
+*/
+
+#main {
+}
+
+/* Begin: header,nav */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  /* width: 1094px; */
+  background-color: #000;
+  color: #fff;
+  font-size: 15px;
+  z-index: 1;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav > li {
+  display: inline-block;
+}
+
+#nav li {
+  position: relative;
+}
+
+/* ?n menu c?p 2 */
+/* #nav .sub_nav {
+  display: none;
+} */
+
+#nav li a {
+  text-decoration: none;
+  font-size: 15px;
+  padding: 12px 24px;
+  color: #fff;
+  line-height: 22px;
+  display: block;
+  width: 100%;
+}
+
+#nav > li > a {
+  text-transform: uppercase;
+}
+
+#nav li:hover .sub_nav a {
+  display: block;
+}
+
+#nav .sub_nav li:hover a,
+#nav > li:hover > a {
+  background-color: #ccc;
+  color: #000;
+}
+
+#nav .sub_nav {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 50%);
+}
+
+#nav .sub_nav a {
+  /* ?n menu con c?p 2 => khi hover vào s? xu?t hi?n  */
+  display: none;
+  min-width: 160px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+#nav,
+.sub_nav {
+  list-style-type: none;
+}
+
+/* Icon: search */
+#header .search-btn {
+  float: right;
+  padding: 12px 15px;
+  line-height: 22.5px;
+}
+
+#header .search-icon {
+  color: #ffffff;
+  font-size: 20px;
+  /* background-color: aqua; */
+}
+
+#header .search-btn:hover {
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+}
+
+#nav .nav-chevron-down {
+  font-size: 15px;
+  /* background-color: #fff; */
+  /* background: 0% 0%; */
+  /* color: #000; */
+  cursor: pointer;
+}
+
+/* End : header, nav */
+
+/* Begin: Slider */
+
+#slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%; /* 50% chi?u ngang chính nó*/
+  /* min-height: 500px; */
+  /* background: pink; */
+  background: url(/Code_Web/w3_band/assets/img/chicago.jpg) right center / cover
+    no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  color: #fff;
+  left: 50%;
+  /*  hoac width: 100%; */
+  /* hoac right: 0 , left: 0 */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  padding: 32px 16px 32px 16px;
+}
+
+#slider .text-heading {
+  font-size: 24px;
+}
+
+#slider .text-description {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 25px;
+}
+
+/* End: Slider */
+
+#content {
+}
+
+#footer {
+}
+/* Begin: Slider */
+
+#slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%; /* 50% chi?u ngang chính nó*/
+  /* min-height: 500px; */
+  /* background: pink; */
+  background: url(/Code_Web/w3_band/assets/img/chicago.jpg) right center / cover
+    no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  color: #fff;
+  left: 50%;
+  /*  hoac width: 100%; */
+  /* hoac right: 0 , left: 0 */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  padding: 32px 16px 32px 16px;
+}
+
+#slider .text-heading {
+  font-size: 24px;
+}
+
+#slider .text-description {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 25px;
+}
+
+/* End: Slider */
+
+#content .content-section {
+  width: 800px;
+  height: 670px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 64px 16px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+.content-section .section-heading {
+  font-size: 30px;
+  letter-spacing: 4px;
+  word-spacing: 1px;
+}
+
+.content-section .section-subheading {
+  margin-top: 25px;
+  font-size: 15px;
+  font-style: italic;
+  word-spacing: 1px;
+  opacity: 0.6;
+}
+
+.content-section .about-text {
+  font-size: 15px;
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 22.5px;
+  word-spacing: 1px;
+  line-height: 1.4;
+  color: #000;
+}
+
+#content .members-list {
+  padding: 47px 0;
+  overflow: hidden;
+}
+
+#content .member-item {
+  float: left;
+  /* width: 33.33%; */
+  width: calc(100% / 3);
+  text-align: center;
+}
+
+#content .member-name {
+  font-size: 15px;
+}
+
+#content .member-img {
+  width: 154px;
+  margin-top: 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#footer {
+}
