@@ -8,6 +8,14 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.text-white {
+  color: #fff;
+}
+
+.clear {
+  clear: both;
+}
+
 /* Nguyên t?c tri?n khai code:
 1. T? ngoài vào trong
 2. T? trên xu?ng dý?i
@@ -141,8 +149,33 @@ html {
   padding-top: 50%; /* 50% chi?u ngang chính nó*/
   /* min-height: 500px; */
   /* background: pink; */
-  background: url(/Code_Web/w3_band/assets/img/chicago.jpg) right center / cover
-    no-repeat;
+  background: url(/assets/img/chicago.jpg) right center / cover no-repeat;
+}
+
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  color: #fff;
+  left: 50%;
+  /*  hoac width: 100%; */
+  /* hoac right: 0 , left: 0 */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  text-align: center;
+  padding: 32px 16px 32px 16px;
+}
+
+#slider .text-heading {
+  font-size: 24px;
+}
+
+#slider .text-description {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 25px;
 }
 
 #slider .text-content {
@@ -173,54 +206,11 @@ html {
 
 /* End: Slider */
 
-#content {
-}
-
-#footer {
-}
-/* Begin: Slider */
-
-#slider {
-  position: relative;
-  margin-top: 46px;
-  padding-top: 50%; /* 50% chi?u ngang chính nó*/
-  /* min-height: 500px; */
-  /* background: pink; */
-  background: url(/Code_Web/w3_band/assets/img/chicago.jpg) right center / cover
-    no-repeat;
-}
-
-#slider .text-content {
-  position: absolute;
-  bottom: 47px;
-  color: #fff;
-  left: 50%;
-  /*  hoac width: 100%; */
-  /* hoac right: 0 , left: 0 */
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  text-align: center;
-  padding: 32px 16px 32px 16px;
-}
-
-#slider .text-heading {
-  font-size: 24px;
-}
-
-#slider .text-description {
-  font-size: 15px;
-  font-weight: 700;
-  margin: 25px;
-}
-
-/* End: Slider */
+/* Begin: Content Section*/
 
 #content .content-section {
   width: 800px;
-  height: 670px;
+  height: 850px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -278,6 +268,122 @@ html {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+/* Begin: Content Section*/
+
+/* Begin: About Tour */
+.tour-section {
+  background-color: #000;
+}
+
+.tickets-list {
+  background-color: #fff;
+  margin-top: 40px;
+  padding: 0px 9px;
+}
+
+.tickets-list li {
+  font-size: 15px;
+  padding: 11px 16px;
+  /* height: 40px; */
+  border-bottom: 1px solid #ddd;
+  text-align: justify;
+  color: #757575;
+  list-style: none;
+}
+
+.tickets-list .sold-out {
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  margin: 0 0 0 16px;
+  padding: 0 8px;
+  background-color: #f44336;
+}
+
+.tickets-list .quantity {
+  float: right;
+  width: 24px;
+  height: 24px;
+  font-size: 15px;
+  text-align: center;
+  line-height: 24px;
+  margin: 0px 16px 0px 0px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+/* Place */
+.places-list {
+  padding: 10px 8px;
+  margin: 32px -19.5px 0;
+  padding-bottom: 48px;
+}
+
+.place-item {
+  float: left;
+  width: calc(100% / 3);
+  /* margin: 0 0 16px; */
+  padding: 4px 10px;
+}
+
+.place-img {
+  display: block;
+  width: 100%;
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+
+.place-content {
+  background-color: #fff;
+  padding: 16px;
+  text-align: start;
+  font-size: 15px;
+}
+
+.place-heading {
+  margin: 15px 0;
+  font-size: 15px;
+  font-weight: 700;
+  word-spacing: 1px;
+  line-height: 22.5px;
+}
+
+.place-time {
+  opacity: 0.6;
+  margin-top: 15px;
+}
+
+.place-dec {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+.place-buy-btn {
+  /* /* margin: 0 0 16px 0; */
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 16px;
+  line-height: 22.5px;
+  text-decoration: none;
+  outline: 1px solid #f44336;
+  white-space: nowrap;
+  background-color: #000;
+  color: #fff;
+}
+
+.place-buy-btn:hover {
+  background-color: #ccc;
+  color: #000;
 }
 
 #footer {
