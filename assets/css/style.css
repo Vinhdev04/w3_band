@@ -5,6 +5,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
 /* Common -> class chung*/
@@ -25,6 +26,12 @@ html {
   margin-right: -19.5px;
 }
 
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .col {
   float: left;
   padding-left: 10px;
@@ -33,12 +40,24 @@ html {
   padding-bottom: 4px;
 }
 
+.col-full {
+  width: 100%;
+}
+
 .col-half {
   width: 50%;
 }
 
 .col-third {
   width: calc(100% / 3);
+}
+
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
 }
 
 /* Nguyên t?c tri?n khai code:
@@ -235,14 +254,14 @@ html {
 
 #content .content-section {
   width: 800px;
-  height: 850px;
+  /* height: 850px; */
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding: 64px 16px;
+  padding: 64px 0 112px;
   text-align: center;
   font-size: 15px;
-  line-height: 22.5px;
+  /* line-height: 22.5px; */
 }
 
 .content-section .section-heading {
@@ -316,7 +335,7 @@ html {
   text-align: center;
   color: #fff;
   margin: 0 0 0 16px;
-  padding: 0 8px;
+  padding: 3px 8px;
   background-color: #f44336;
 }
 
@@ -343,7 +362,7 @@ html {
   padding: 10px 8px;
   margin-top: 32px;
   margin-bottom: 0;
-  padding-bottom: 48px;
+  /* padding-bottom: 48px; */
 }
 
 .col-third {
@@ -568,6 +587,79 @@ button.modal-close-btn {
     -o-transform: translateY(0);
   }
 }
+/* Contact form */
+.contact-content {
+  margin-top: 48px;
+}
 
+.contact-info {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.contact-info i[class*="fa-"] {
+  width: 40px;
+  display: inline-block;
+}
+
+.contact-form .form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.contact-form {
+  font-style: 15px;
+  padding: 10px 10px;
+}
+
+.form-submit-btn {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  float: right;
+  margin: 17px -8px;
+}
+
+.form-submit-btn:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Map section */
+.map-section img {
+  width: 100%;
+}
+
+/* Footer */
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .socials-list {
+  font-size: 24px;
+}
+
+#footer .socials-list a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+#footer.copyright a:hover,
+#footer .socials-list a:hover {
+  color: rgb(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#footer .copyright {
+  margin-top: 15px;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+#footer.copyright a {
+  color: rgb(0, 0, 0, 0.6);
 }
