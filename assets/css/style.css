@@ -37,10 +37,10 @@ html {
 
 #header {
   position: fixed;
-  top: 0;
+  top: -4px;
   left: 0;
   right: 0;
-  height: 46px;
+  height: 50px;
   /* width: 1094px; */
   background-color: #000;
   color: #fff;
@@ -388,15 +388,20 @@ html {
 
 /* Begin: Buy Tickets */
 .modal {
+  /* display: flex; */
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+}
+
+.modal.open {
+  display: flex;
 }
 
 .modal-container {
@@ -404,6 +409,8 @@ html {
   width: 900px;
   max-width: calc(100% - 32px);
   min-height: 200px;
+  animation: modalFaceIn ease 0, 3s;
+  -webkit-animation: modalFaceIn ease 0.5s;
 }
 
 header.modal-header {
@@ -525,6 +532,27 @@ button.modal-close-btn:hover {
 button.modal-close-btn {
   color: #fff;
 }
+
+/* H? tr? hi?u ?ng buy tickets */
+@keyframes modalFaceIn {
+  from {
+    opacity: 0;
+    transform: translateY(-140px);
+    -webkit-transform: translateY(-140px);
+    -moz-transform: translateY(-140px);
+    -ms-transform: translateY(-140px);
+    -o-transform: translateY(-140px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
 
 #footer {
 }

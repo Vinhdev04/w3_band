@@ -163,7 +163,9 @@
                   <p class="place-dec">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button href="#" class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
 
@@ -180,7 +182,9 @@
                   <p class="place-dec">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button href="#" class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
 
@@ -197,7 +201,9 @@
                   <p class="place-dec">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <a href="#" class="place-buy-btn">Buy Tickets</a>
+                  <button href="#" class="place-buy-btn js-buy-ticket">
+                    Buy Tickets
+                  </button>
                 </div>
                 <div class="clear"></div>
               </div>
@@ -216,10 +222,10 @@
       <!-- End: Content -->
 
       <!-- Begin: Buy Tickets -->
-      <div class="modal">
-        <div class="modal-container">
+      <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
           <header class="modal-header">
-            <div class="modal-close">
+            <div class="modal-close js-modal-close">
               <i class="fa-solid fa-xmark"></i>
             </div>
             <i class="fa-solid fa-cart-shopping"></i>
@@ -262,6 +268,44 @@
           </footer>
         </div>
       </div>
+
+      <!-- javascript buy-ticket -->
+      <script>
+        const buyBtns = document.querySelectorAll(".js-buy-ticket");
+        const modal = document.querySelector(".js-modal"); // open-buy-tickets
+        const modalClose = document.querySelector(".js-modal-close"); // close-buy-tickets
+        // lay modal-container -> xu ly truong hop noi bot
+        const modalContainer = document.querySelector(".js-modal-container");
+
+        // khoi toa ham duy?t danh sách button -> l?ng nghe s? ki?n
+        // open buy-tickets -> xóa class "open" kh?i modal
+        function showBuyTickets() {
+          // alert("Show");
+          modal.classList.add("open");
+        }
+
+        // close buy-tickets -> xóa class "open" kh?i modal
+        function closeBuyTickets() {
+          modal.classList.remove("open");
+        }
+
+        // t?o biên m?i và lıu l?n lı?t 3 button -> duy?t danh sách button
+        for (const buyBtn of buyBtns) {
+          // lang nghe hành vi click vào button open
+          buyBtn.addEventListener("click", showBuyTickets);
+        }
+
+        // nghe hành vi click vào button close
+        modalClose.addEventListener("click", closeBuyTickets);
+        // khi b?m vào b?t k? khu v?c buy tickets -> ğóng form buy tickets
+        // -> hành vi n?i b?t
+        modal.addEventListener("click", closeBuyTickets);
+
+        // l?ng nghe hành vi click vào modal-container
+        modalContainer.addEventListener("click", function (event) {
+          event.stopPropagation(); // d?ng vi?c ğóng form ticket khi click vào t? "modal-container" -> t?i modal-container s? b? ch?n
+        });
+      </script>
 
       <div id="footer"></div>
     </div>
