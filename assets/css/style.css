@@ -386,5 +386,145 @@ html {
   color: #000;
 }
 
+/* Begin: Buy Tickets */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  background-color: #fff;
+  width: 900px;
+  max-width: calc(100% - 32px);
+  min-height: 200px;
+}
+
+header.modal-header {
+  position: relative;
+  /* width: 900px; */
+  height: 129px;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #009688;
+  /* padding: 32px 0; */
+  letter-spacing: 4px;
+  font-size: 30px;
+  line-height: 45px;
+  text-align: center;
+  word-spacing: 1px;
+  border: 1px solid #ccc;
+  padding: 32px;
+  outline: 1px solid #314e6e;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 46px;
+  height: 52px;
+  text-align: center;
+  color: #fff !important;
+  background-color: #009688;
+  font-size: 24px;
+  padding: 0px 12px;
+  cursor: pointer;
+  line-height: 36px;
+}
+
+.modal-close:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+label.modal-label {
+  margin: 15px 0;
+}
+
+.modal-body {
+  padding: 16px 14px;
+}
+
+input.modal-input {
+  /* padding: 10px; */
+  padding: 18px;
+  height: 40px;
+  width: 868px;
+  /* width: 100%; */
+  font-size: 15px;
+  line-height: 22.5px;
+  border: 1px solid #ccc;
+  margin-bottom: 24px;
+}
+
+.fa-solid {
+  margin: 15px 0 15px 0;
+}
+
+button#buy-tickets {
+  display: block;
+  /* width: 868px; */
+  width: 100%;
+  /* padding: 18px; */
+  height: 55px;
+  color: #fff;
+  background-color: #009688;
+  cursor: pointer;
+  margin: 16px 0 16px 0;
+  padding: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 22.5px;
+  white-space: nowrap;
+  /* vertical-align: middle; */
+}
+
+.modal-footer .modal-help {
+  float: right;
+  font-size: 15px;
+  margin: 15px;
+}
+
+button#buy-tickets:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+button.modal-close-btn {
+  float: left;
+  margin: 15px;
+  padding: 0px 3px;
+  background: #f44336;
+  width: 83.5px;
+  height: 42.5px;
+  font-size: 15px;
+  line-height: 42.5px;
+  border: none;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button.modal-close-btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+button.modal-close-btn {
+  color: #fff;
+}
+
 #footer {
 }

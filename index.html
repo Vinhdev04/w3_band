@@ -23,7 +23,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
+    <title>w3_band</title>
   </head>
   <body>
     <div id="main">
@@ -214,6 +214,54 @@
         <!-- End: About Contact -->
       </div>
       <!-- End: Content -->
+
+      <!-- Begin: Buy Tickets -->
+      <div class="modal">
+        <div class="modal-container">
+          <header class="modal-header">
+            <div class="modal-close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            Tickets
+          </header>
+
+          <div class="modal-body">
+            <label for="text-form" class="modal-label">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Tickets, $15 per person
+            </label>
+            <input
+              type="text"
+              class="modal-input"
+              placeholder="How many?"
+              id="text-form"
+            />
+
+            <label for="email-form" class="modal-label">
+              <i class="fa-solid fa-user"></i>
+              Send To
+            </label>
+            <input
+              type="email"
+              class="modal-input"
+              placeholder="Enter mail"
+              id="email-form"
+            />
+            <button id="buy-tickets">
+              Pay <i class="fa-solid fa-check"></i>
+            </button>
+          </div>
+
+          <footer class="modal-footer">
+            <button class="modal-close-btn">
+              Close
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <p class="modal-help">Need <a href="#" alt="help">help?</a></p>
+          </footer>
+        </div>
+      </div>
 
       <div id="footer"></div>
     </div>
