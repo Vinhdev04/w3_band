@@ -27,6 +27,7 @@
     />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <title>The Band</title>
   </head>
   <body>
@@ -69,6 +70,11 @@
         <!-- Begin: Search_icon -->
         <div class="search-btn">
           <i class="search-icon fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon fa-solid fa-bars"></i>
         </div>
         <!-- End: Search_icon -->
       </div>
@@ -399,5 +405,35 @@
       </div>
       <!-- End: footer -->
     </div>
+
+    <!-- Script responsive mobile - menu -> open/close menu -->
+    <script>
+      var header = document.getElementById("header");
+      var mobileMenu = document.getElementById("mobile-menu");
+      var headerHeight = header.clientHeight;
+      // console.log(header);
+      // console.log(mobileMenu);
+      mobileMenu.onclick = function () {
+        var isClose = header.clientHeight === headerHeight;
+        if (isClose) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = "50px";
+        }
+      };
+
+      // t? ðóng khi ch?n menu
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      // console.log(menuItems);
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        // console.log(menuItem);
+
+        menuItem.onclick = function() {
+          // console.log(this);
+          header.style.height = null;  //   click item -> hidden menu
+        }
+      }
+    </script>
   </body>
 </html>

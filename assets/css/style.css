@@ -90,6 +90,7 @@ html {
   color: #fff;
   font-size: 15px;
   z-index: 1;
+  overflow: hidden;
 }
 
 #nav {
@@ -157,12 +158,24 @@ html {
 }
 
 /* Icon: search */
+#header .mobile-menu-btn,
 #header .search-btn {
   float: right;
   padding: 12px 15px;
   line-height: 22.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
+#header .mobile-menu-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+#header .menu-icon,
 #header .search-icon {
   color: #ffffff;
   font-size: 20px;
@@ -173,6 +186,15 @@ html {
   background-color: #f44336;
   color: #fff;
   cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
 }
 
 #nav .nav-chevron-down {
@@ -255,13 +277,15 @@ html {
 #content .content-section {
   width: 800px;
   /* height: 850px; */
-  max-width: 800px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 64px 0 112px;
   text-align: center;
   font-size: 15px;
   /* line-height: 22.5px; */
+  padding-left: 19.5px;
+  padding-right: 28.5px;
 }
 
 .content-section .section-heading {
