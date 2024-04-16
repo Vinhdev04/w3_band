@@ -90,7 +90,6 @@ html {
   color: #fff;
   font-size: 15px;
   z-index: 1;
-  overflow: hidden;
 }
 
 #nav {
@@ -384,7 +383,7 @@ html {
 /* Place */
 .places-list {
   padding: 10px 8px;
-  margin-top: 32px;
+  margin-top: 16px;
   margin-bottom: 0;
   /* padding-bottom: 48px; */
 }

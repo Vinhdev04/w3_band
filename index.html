@@ -112,7 +112,7 @@
           </p>
           <div class="row members-list">
             <!-- Member 1 -->
-            <div class="col col-third text-center">
+            <div class="col col-third text-center member-item">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -122,7 +122,7 @@
             </div>
 
             <!-- Member 2 -->
-            <div class="col col-third text-center">
+            <div class="col col-third text-center member-item">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -132,7 +132,7 @@
             </div>
 
             <!-- Member 3 -->
-            <div class="col col-third text-center">
+            <div class="col col-third text-center member-item">
               <p class="member-name">Name</p>
               <img
                 src="./assets/img/bandmember.jpg"
@@ -161,7 +161,7 @@
 
             <!-- Place 01 -->
             <div class="row places-list">
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="./assets/img/newyork.jpg"
                   alt="New York"
@@ -180,7 +180,7 @@
               </div>
 
               <!-- Place 02 -->
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="./assets/img/paris.jpg"
                   alt="New York"
@@ -199,7 +199,7 @@
               </div>
 
               <!-- Place 03 -->
-              <div class="col col-third">
+              <div class="col col-third s-col-full mt-16">
                 <img
                   src="./assets/img/sanfran.jpg"
                   alt="New York"
@@ -427,12 +427,17 @@
       // console.log(menuItems);
       for (var i = 0; i < menuItems.length; i++) {
         var menuItem = menuItems[i];
-        // console.log(menuItem);
 
-        menuItem.onclick = function() {
-          // console.log(this);
-          header.style.height = null;  //   click item -> hidden menu
-        }
+        menuItem.onclick = function (event) {
+          var isParentMenu =
+            this.nextElementSibling &&
+            this.nextElementSibling.classList.contains("sub_nav");
+          if (isParentMenu) {
+            event.preventDefault(); // Ngãn ch?n s? ki?n m?c ð?nh
+          } else {
+            header.style.height = null; //   click item -> hidden menu
+          }
+        };
       }
     </script>
   </body>

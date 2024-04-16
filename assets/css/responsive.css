@@ -8,6 +8,18 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+  #header {
+    overflow: hidden;
+  }
+
+  #header .search-btn {
+    display: none;
+  }
+
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
   #nav > li {
     display: block;
   }
@@ -18,11 +30,29 @@
   #nav > li:first-child {
     display: inline-block;
   }
-  #header .search-btn {
-    display: none;
+  #nav .sub_nav a {
+    color: #fff;
+  }
+  #nav .sub_nav {
+    position: initial;
+    background-color: #333;
   }
 
-  #header .mobile-menu-btn {
-    display: block;
+  #nav li a {
+    padding: 17px 50px;
+    line-height: 22px;
+  }
+
+  #content .members-list .member-item {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  #content .member-img {
+    width: 60%;
+  }
+
+  .s-col-full {
+    width: 100%;
   }
 }
