@@ -21,7 +21,7 @@
       rel="stylesheet"
       href="./assets/fonts/themify-icons/themify-icons.css"
     />
-    <link rel="shortcut icon" href="./assets/img/apple-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/icon16.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="assets/font/themify-icons/themify-icons.css">
@@ -41,7 +41,7 @@
                       More
                       <i class="nav-arrow-down ti-angle-down"></i>
                   </a>
-                  <ul class="subnav"> <!-- th?ng này là ul qu?n l? tr?c ti?p nên thay b?ng div s? ko c?n tính list -->
+                  <ul class="subnav"> <!-- th?ng nï¿½y lï¿½ ul qu?n l? tr?c ti?p nï¿½n thay b?ng div s? ko c?n tï¿½nh list -->
                       <li><a href="#">Merchandise</a></li>
                       <li><a href="#">Extras</a></li>
                       <li><a href="#">Media</a></li>
@@ -78,7 +78,7 @@
                   <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
                   <div class="row members-list">
-                      <!-- thêm col col-third  th?a hý?ng thu?c tính c?t -->
+                      <!-- thï¿½m col col-third  th?a hï¿½?ng thu?c tï¿½nh c?t -->
                       <div class="col col-third s-col-full mt-16 text-center">
                           <p class="member-name">Name</p>
                           <img src="./assets/img/bandmember.jpg" alt="Name"class="member-img">
@@ -254,17 +254,17 @@
     var header = document.getElementById('header');
     var moblieMenu = document.getElementById('moblie-menu');
     var headerHeight = header.clientHeight;
-  //ðóng m? mobile menu
+  //ï¿½ï¿½ng m? mobile menu
     moblieMenu.onclick=function(){
       var isClose = header.clientHeight===headerHeight ;
-      // có bug ?f ss tr?c ti?p clientHeight=== 46;
+      // cï¿½ bug ?f ss tr?c ti?p clientHeight=== 46;
       if(isClose){
           header.style.height='auto';
       }else{
           header.style.height='46px';
       }
     }
-    //t? ð?ng ðóng menu
+    //t? ï¿½?ng ï¿½ï¿½ng menu
     var menuItems =document.querySelectorAll('#nav li a[href*="#"]');
     for(var i=0;i<menuItems.length;i++){
       var menuItem=menuItems[i];
@@ -289,25 +289,25 @@
       const modal = document .querySelector('.js-modal')
       const modalClose = document .querySelector('.js-modal-close')
       const modalContainer =document .querySelector('.js-modal-container')
-      //hi?n th? modal mua vé (thêm class open và modal)
+      //hi?n th? modal mua vï¿½ (thï¿½m class open vï¿½ modal)
       function showBuyTickets(){
           modal.classList.add('open')
       }
-      //hàm ?n modal mua vé (g? b? class open vào modal)
+      //hï¿½m ?n modal mua vï¿½ (g? b? class open vï¿½o modal)
       function hideBuyTickets(){
           modal.classList.remove('open')
       }
-      //l?p qua t?ng th? button và nghe hành vi click
+      //l?p qua t?ng th? button vï¿½ nghe hï¿½nh vi click
       for(const buyBtn of buyBtns ){
           buyBtn.addEventListener('click',showBuyTickets)
 
       }
-      //nghe click vào close
+      //nghe click vï¿½o close
       modalClose.addEventListener('click',hideBuyTickets)
 
-      //tính ch?t n?i b?t c?a s? ki?n
+      //tï¿½nh ch?t n?i b?t c?a s? ki?n
       modal.addEventListener('click',hideBuyTickets)
-      //ng?ng hành vi n?i b?t t? modalContainer
+      //ng?ng hï¿½nh vi n?i b?t t? modalContainer
       modalContainer.addEventListener('click',function () {
           event.stopImmediatePropagation()
       })
